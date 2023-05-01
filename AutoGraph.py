@@ -9,19 +9,19 @@ from pandas import DataFrame, read_csv
 import os, sys
 from random import sample
 
-if __name__ == '__main__':
-#if True:
-    from lib.functions import *
-    from lib.rmsd import rmsd, assign_remaining_files, rmsdMatrix
-    from lib.LouvainClustering import Louvain
-    from lib.findThreshold import findThreshold
-    from lib.select_centroids import centroid_energy, centroid_weighted_degree, centroid_eccentricity, centroid_betweenness
-else:
-    from .lib.functions import *
-    from .lib.rmsd import rmsd, assign_remaining_files, rmsdMatrix
-    from .lib.LouvainClustering import Louvain
-    from .lib.findThreshold import findThreshold
-    from .lib.select_centroids import centroid_energy, centroid_weighted_degree, centroid_eccentricity, centroid_betweenness
+# if __name__ == '__main__':
+# #if True:
+from AutoGraph.lib.functions import *
+from AutoGraph.lib.rmsd import rmsd, assign_remaining_files, rmsdMatrix
+from AutoGraph.lib.LouvainClustering import Louvain
+from AutoGraph.lib.findThreshold import findThreshold
+from AutoGraph.lib.select_centroids import centroid_energy, centroid_weighted_degree, centroid_eccentricity, centroid_betweenness
+# else:
+#     from .lib.functions import *
+#     from .lib.rmsd import rmsd, assign_remaining_files, rmsdMatrix
+#     from .lib.LouvainClustering import Louvain
+#     from .lib.findThreshold import findThreshold
+#     from .lib.select_centroids import centroid_energy, centroid_weighted_degree, centroid_eccentricity, centroid_betweenness
 
 class AutoGraph:
     '''AutoGraph: Autonomous graph based conformational clustering.\n'''
